@@ -1,0 +1,91 @@
+@use '../abstracts/variable.scss' as v;
+@use '../abstracts/mixins.scss' as m;
+
+$tablet: "540px";
+$web: "980px";
+
+$big: "1500px";
+
+.plans-wrapper{
+    width: 100vw;
+    height: auto;
+    background-color: v.$cBackground;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+
+    & .cards-list{
+
+        @include m.flexLayout(); 
+        flex-direction: column;
+
+        @include m.break($tablet) {
+            @include m.flexLayout(); 
+            flex-direction: column;
+        }
+
+        @include m.break($web) {
+            margin: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }}
+
+        @include m.break($big) {
+            padding-left: 5%;
+            padding-right: 5%;
+
+        }
+
+
+
+
+    & .plan-card{
+        padding: 10px 0;
+        & .card-wrapper{
+            width: 310px;
+            height: 400px;
+            background-color: v.$cWhite;
+            border: 1px solid black;
+            border-radius: 8px;
+            box-shadow: 5px 5px 10px #000000;
+            text-align: center;
+
+            @include m.break($tablet) {
+                width: 90vw;
+                height: 300px;
+                text-align: left;
+                padding-left: 20px;
+            }
+
+            @include m.break($web) {
+                text-align: center;
+                padding-left: 0;
+                width: 310px;
+                height: 400px;
+            }}
+    
+
+
+
+
+            & h2{
+                font-size: v.$landingtext-font;
+                color: v.$cblack;
+                margin-top: 25px;
+
+                @include m.break($tablet) {
+                    margin-top: 40px;
+                }
+            }
+            & p{
+                font-size: v.$smalltext-font;
+                color: v.$cblack;
+                margin: 40px 0 55px 0;
+
+                @include m.break($tablet) {
+                    margin: 40px 0;
+                }
+            }
+    }
+}

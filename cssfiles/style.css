@@ -1,0 +1,227 @@
+.container .top-wrapper {
+  background-image: url(../../sample-pic.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #D9D9D9;
+}
+.container .top-wrapper h1 {
+  width: 70%;
+  font-size: 48px;
+  color: #ffffff;
+}
+.container .top-wrapper p {
+  width: 70%;
+  font-size: 30px;
+  color: #ffffff;
+}
+.container .top-wrapper button {
+  margin-top: 30px;
+}
+@media screen and (min-width: 540px) {
+  .container .top-wrapper {
+    background-image: url(../../sample-pic.jpg);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 540px) and (min-width: 960px) {
+  .container .top-wrapper {
+    background-image: url(../../sample-pic.jpg);
+  }
+  .container .top-wrapper button {
+    margin-right: auto;
+    margin-left: 15%;
+  }
+}
+
+.plans-wrapper {
+  width: 100vw;
+  height: auto;
+  background-color: #D9D9D9;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.plans-wrapper .cards-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 540px) {
+  .plans-wrapper .cards-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 980px) {
+  .plans-wrapper .cards-list {
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .plans-wrapper {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+.plans-wrapper .plan-card {
+  padding: 10px 0;
+}
+.plans-wrapper .plan-card .card-wrapper {
+  width: 310px;
+  height: 400px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px #000000;
+  text-align: center;
+}
+@media screen and (min-width: 540px) {
+  .plans-wrapper .plan-card .card-wrapper {
+    width: 90vw;
+    height: 300px;
+    text-align: left;
+    padding-left: 20px;
+  }
+}
+@media screen and (min-width: 980px) {
+  .plans-wrapper .plan-card .card-wrapper {
+    text-align: center;
+    padding-left: 0;
+    width: 310px;
+    height: 400px;
+  }
+}
+.plans-wrapper .plan-card h2 {
+  font-size: 30px;
+  color: #000000;
+  margin-top: 25px;
+}
+@media screen and (min-width: 540px) {
+  .plans-wrapper .plan-card h2 {
+    margin-top: 40px;
+  }
+}
+.plans-wrapper .plan-card p {
+  font-size: 20px;
+  color: #000000;
+  margin: 40px 0 55px 0;
+}
+@media screen and (min-width: 540px) {
+  .plans-wrapper .plan-card p {
+    margin: 40px 0;
+  }
+}
+
+/***
+    The new CSS reset - version 1.7.3 (last updated 7.8.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+button {
+  width: 200px;
+  height: 55px;
+  border-radius: 30px;
+  background-color: #716666;
+  text-align: center;
+  color: #ffffff;
+}
+button:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

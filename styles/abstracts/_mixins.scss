@@ -1,0 +1,12 @@
+@use '../abstracts/variable.scss' as v;
+@mixin flexLayout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin break($width) {
+    @media screen and (min-width: $width) {
+      @content
+    }
+}

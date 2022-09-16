@@ -1,0 +1,14 @@
+@use '../abstracts/variable.scss' as v;
+
+button{
+    width: 200px;
+    height: 55px;
+    border-radius: 30px;
+    background-color: v.$cButtonbg;
+    text-align: center;
+    color: v.$cWhite;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,59 @@
+@use '../abstracts/variable.scss' as v;
+@use '../abstracts/mixins.scss' as m;
+
+$tablet: "540px";
+$web: "960px";
+
+.container{
+
+  & .top-wrapper{
+
+    background-image: url(../../sample-pic.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: auto;
+    @include m.flexLayout(); 
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: v.$cBackground;   
+
+    & h1 {
+      width: 70%;
+      font-size: v.$maintitle-font;
+      color: v.$cWhite;
+    }
+
+    & p {
+      width: 70%;
+      font-size: v.$landingtext-font;
+      color: v.$cWhite;
+    }
+
+    & button {
+      margin-top: 30px;
+    }
+    
+
+    @include m.break($tablet) {
+      background-image: url(../../sample-pic.jpg);
+      width: 100vw;
+      height: 100vh;
+      @include m.flexLayout();
+    
+    @include m.break($web) {
+      background-image: url(../../sample-pic.jpg);
+
+      & button {
+        margin-right: auto;
+        margin-left: 15%;
+      }
+    }
+  
+
+
+  }
+  }
+}
